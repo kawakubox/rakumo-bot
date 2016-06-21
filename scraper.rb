@@ -54,6 +54,7 @@ end
 
 texts = boards.flatten.keep_if { |b| b.recent? 1 }.map(&:to_human)
 
+return if texts.empty?
 
 notifier = Slack::Notifier.new ENV['SLACK_INCOMING_URL'], channel: ENV['SLACK_CHANNEL']
 
