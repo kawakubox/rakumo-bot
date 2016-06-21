@@ -13,8 +13,8 @@ class Board
   end
 
   def recent?(offset = 7)
-    return Date.today - offset < @updated_at if @updated_at
-    return Date.today - offset < @created_at
+    return Date.today - offset <= @updated_at if @updated_at
+    return Date.today - offset <= @created_at
   end
 
   def to_human

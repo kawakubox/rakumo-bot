@@ -52,7 +52,7 @@ boards = []
   boards << doc.css("div[aria-labelledby='fasti_board_widgets_layout_ScrollingTabController_0_fasti_board_views_BoardView_#{i}'] .postSummaryView").map { |elm| Board.parse elm }
 end
 
-texts = boards.flatten.keep_if { |b| b.recent? }.map(&:to_human)
+texts = boards.flatten.keep_if { |b| b.recent? 1 }.map(&:to_human)
 
 
 notifier = Slack::Notifier.new ENV['SLACK_INCOMING_URL'], channel: ENV['SLACK_CHANNEL']
