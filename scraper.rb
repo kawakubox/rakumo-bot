@@ -60,7 +60,7 @@ notifier = Slack::Notifier.new ENV['SLACK_INCOMING_URL'], channel: ENV['SLACK_CH
 
 notifier.ping <<~EOS
   ```
-  *** Rakumo Board 直近１週間の更新 ***
+  *** Rakumo Board 昨日からの更新 ***
   #{texts.join "\n"}
   ```
 EOS
