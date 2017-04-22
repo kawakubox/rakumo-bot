@@ -41,9 +41,17 @@ sleep 1
 
 # rakumo board
 
-# ワークスタイル
+#  5: インデックス
+#  6: ワークスタイル(社員)
+#  7: ワークスタイル(バイト・パート)
+#  8: オフィスガイドライン
+#  9: 社内制度・イベント
+# 10: 福利厚生
+# 11: 管理部門への依頼
+# 12: システム・ツール
+# 13: 組織情報
 boards = []
-(6..13).each do |i|
+(5..13).each do |i|
   session.find("#fasti_board_widgets_layout_ScrollingTabController_0_fasti_board_views_BoardView_#{i}").click
 
   sleep 10
